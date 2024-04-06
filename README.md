@@ -2,7 +2,7 @@
 
 ## Overview
 
-Ollama GUI Python GTK is a chat application designed for use with the Ollama chat service. It's built using Python and GTK3, providing a basic interface to send and receive messages.
+Ollama GUI Python GTK is a GUI application designed for use with Ollama. It's built using Python and GTK3, providing a basic interface to send and receive messages.
 
 ![plot](Images/GUI.png)
 
