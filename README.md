@@ -54,13 +54,19 @@ sudo zypper install python3 python3-gobject gtk3
 These commands will install Python 3, the GTK3 library, and GObject Introspection, which are essential for running the Ollama GUI Python GTK. Adjustments might be needed based on the specific versions of your Linux distribution or if you're using a non-standard setup.
 
 ## Running
+### From source
 
 Ensure the Ollama service is accessible. Start the app with:
 
 ```sh
 python3 ollama_gui_python_gtk.py
 ```
+### Using the binary
 
+```sh
+chmod +x ollama_gui_python_gtk
+./ollama_gui_python_gtk
+```
 ## Contributing
 
 Feel free to report issues or contribute through pull requests.
