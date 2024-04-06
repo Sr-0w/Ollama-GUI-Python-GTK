@@ -8,7 +8,7 @@ from gi.repository import Gtk, Pango
 
 class OllamaChatWindow(Gtk.Window):
     def __init__(self):
-        super().__init__(title="Chat avec Ollama")
+        super().__init__(title="Ollama GUI Python GTK")
         self.set_border_width(10)
         self.set_default_size(1200, 800)
         
@@ -30,6 +30,7 @@ class OllamaChatWindow(Gtk.Window):
         scrolled_window.set_hexpand(True)
         scrolled_window.set_vexpand(True)
         scrolled_window.add(self.textview)
+        self.scrolled_window.set_sensitive(False)
         vbox.pack_start(scrolled_window, True, True, 0)
         
         textbuffer = self.textview.get_buffer()
@@ -41,6 +42,7 @@ class OllamaChatWindow(Gtk.Window):
         
         self.entry = Gtk.Entry()
         self.entry.connect("activate", self.on_send_clicked)
+        self.entry.set_sensitive(False)
         hbox.pack_start(self.entry, True, True, 0)
         
         self.send_button = Gtk.Button()
@@ -135,7 +137,7 @@ class OllamaChatWindow(Gtk.Window):
                                     flags=Gtk.DialogFlags.MODAL,
                                     buttons=("Cancel", Gtk.ResponseType.CANCEL,
                                              "Select", Gtk.ResponseType.OK))
-                dialog.set_default_size(200, 100)
+                dialog.set_default_size(400, 100)
                 
                 combo = Gtk.ComboBoxText()
                 for name in models_names:
@@ -151,6 +153,8 @@ class OllamaChatWindow(Gtk.Window):
                     self.list_models_button.set_label(f"Model : {self.selected_model}")
                     self.send_button.set_sensitive(True)
                     self.save_button.set_sensitive(True)
+                    self.entry.set_sensitive(True)
+                    self.scrolled_window.set_sensitive(True)
                 dialog.destroy()
             else:
                 print(f"Error - Server answer : {response.status_code}")
