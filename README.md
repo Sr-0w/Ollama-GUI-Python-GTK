@@ -6,9 +6,16 @@ Ollama GUI Python GTK is a chat application designed for use with the Ollama cha
 
 ![plot](Images/GUI.png)
 
+Built for the [Ollama app](https://ollama.com/)
+
 ## Features
 
-- Select from available Ollama models.
+- Select from available models.
+  - Models from the Ollama library can be downloaded with a prompt. For example, to download the `llama2` model:
+    ```
+    ollama pull llama2
+    ```
+    More info on the official [Ollama Github](https://github.com/ollama/ollama)
 - View and save your chat history.
 - Send messages asynchronously.
 
