@@ -86,4 +86,4 @@ Feel free to report issues or contribute through pull requests.
 
 ## License
 
-Released under GPL-2.0 or later. See [GPL-2.0 License](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) for more details.
+Released under GPL-3.0 or later. See [GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.html) for more details.
