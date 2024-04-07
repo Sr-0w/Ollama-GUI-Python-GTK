@@ -30,7 +30,7 @@ class OllamaChatWindow(Gtk.Window):
         scrolled_window.set_hexpand(True)
         scrolled_window.set_vexpand(True)
         scrolled_window.add(self.textview)
-        self.scrolled_window.set_sensitive(False)
+        scrolled_window.set_sensitive(False)
         vbox.pack_start(scrolled_window, True, True, 0)
         
         textbuffer = self.textview.get_buffer()
